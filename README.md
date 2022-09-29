@@ -7,6 +7,10 @@ The project is based on the idea of an app store - similar to Windows app store 
 3. Warn the user if they are lacking sufficient balance to buy an app
 4. Purchase an app if its within the limits of their balance
 
+Tech stacks used:<br>
+<strong> Language: C#, XAML </strong> <br>
+<strong> Framework: .NET, Windows Presentation Foundation (WPF) </strong>
+
 Given below is a screenshot of the app at start.
 
 ![image](https://user-images.githubusercontent.com/37955433/193111028-b3c4a17f-b2e9-47d3-a3bd-2e3aabd8c50e.png)
