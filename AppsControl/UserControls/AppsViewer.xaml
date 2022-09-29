@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="AppsControl.UserControls.AppsViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AppsControl.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1000"
+             Margin="5,5,5,5">
+    <Grid>
+        <!--TODO: Step 2 Add row and colum definitions    -->
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="0.02*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--TODO: Step 3 Add left button and create event-->
+        <Button
+            Width="40"
+            Height="40"
+            Margin="4"
+            Grid.Column="0" 
+            VerticalAlignment="Center" 
+            Name="ScrollLeftButton" 
+            Click="ScrollLeftButton_Click"
+            Content="&lt;"
+        />
+
+        <!--TODO: Step 4 Add the scroll viewer and create event-->
+        <ScrollViewer
+            Grid.Column="1"
+            x:Name="AppsScrollView"
+            VerticalScrollBarVisibility="Hidden"
+            HorizontalScrollBarVisibility="Hidden"
+        >
+            <!--TODO: Step 5: Add the ScrollViewer Resources
+            This is so that we can use data binding onto a stack panel-->
+            <ScrollViewer.Resources>
+                <DataTemplate x:Key="AppListTemplate">
+                    <StackPanel/>
+                </DataTemplate>
+            </ScrollViewer.Resources>
+            <!--TODO: Step 6: Add the ItemsControl
+            This is where the data acutally get displayed
+            GOTO: AppsViewer.xaml.cs
+            -->
+            <ItemsControl x:Name="AppsList" 
+                          ItemTemplate="{StaticResource AppListTemplate}"
+            >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!--TODO: Step 9 Add right button and create event
+        GOTO AppsViewer.xaml.cs
+        -->
+        <Button
+            Width="40"
+            Height="40"
+            Margin="4"
+            Grid.Column="2" 
+            VerticalAlignment="Center" 
+            Name="ScrollRightButton" 
+            Click="ScrollRightButton_Click"
+            Content="&gt;"
+        />
+    </Grid>
+</UserControl>
