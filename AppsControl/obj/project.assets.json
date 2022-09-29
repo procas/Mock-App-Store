@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Proma_Mukherjee\\source\\repos\\AppsControl\\AppsControl\\AppsControl.csproj",
+      "projectUniqueName": "C:\\Users\\Proma_Mukherjee\\source\\repos\\WPFAppsViewer\\AppsControl\\AppsControl.csproj",
       "projectName": "AppsControl",
-      "projectPath": "C:\\Users\\Proma_Mukherjee\\source\\repos\\AppsControl\\AppsControl\\AppsControl.csproj",
+      "projectPath": "C:\\Users\\Proma_Mukherjee\\source\\repos\\WPFAppsViewer\\AppsControl\\AppsControl.csproj",
       "packagesPath": "C:\\Users\\Proma_Mukherjee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Proma_Mukherjee\\source\\repos\\AppsControl\\AppsControl\\obj\\",
+      "outputPath": "C:\\Users\\Proma_Mukherjee\\source\\repos\\WPFAppsViewer\\AppsControl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Proma_Mukherjee\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -8,17 +8,26 @@
     <StackPanel x:Name="Product" Margin="0,0,0,13">
         <Image x:Name="ProductImage" Height="84" Width="93"
           Source="../Images/camera.png"/>
-        <TextBox x:Name="ProductName" Text="Camera" IsEnabled="False" Height="20" Width="172"/>
-        <Label x:Name="AppInfo" Content="DOWNLOAD&#xD;&#xA;&#xD;&#xA;FREE&#xD;&#xA;" Height="66" Foreground="Black" Background="Black" RenderTransformOrigin="0.5,0.5" Width="173"
+        <TextBox x:Name="ProductName" Text="Camera" IsEnabled="False" Height="20" Width="143"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0.2*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="AppInfo" Height="28" Foreground="Black" Background="Black" RenderTransformOrigin="0.5,0.5"
+                   Grid.Column="0" Grid.ColumnSpan="2" Margin="29,0,29,0"
               >
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.12"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform />
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Image x:Name="Download" Height="20" Source="/Images/download.png" Grid.Column="1" Margin="11,4,8,4" MouseLeftButtonDown="Download_MouseLeftButtonDown"/>
+        </Grid>
+
     </StackPanel>
 </UserControl>

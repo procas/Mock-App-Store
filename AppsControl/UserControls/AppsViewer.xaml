@@ -9,7 +9,7 @@
              Margin="5,5,5,5">
     <Grid>
         <!--TODO: Step 2 Add row and colum definitions    -->
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -37,7 +37,7 @@
             Grid.Column="1"
             x:Name="AppsScrollView"
             VerticalScrollBarVisibility="Hidden"
-            HorizontalScrollBarVisibility="Hidden"
+            HorizontalScrollBarVisibility="Hidden" Margin="0,81,0,74"
         >
             <!--TODO: Step 5: Add the ScrollViewer Resources
             This is so that we can use data binding onto a stack panel-->
@@ -51,7 +51,7 @@
             GOTO: AppsViewer.xaml.cs
             -->
             <ItemsControl x:Name="AppsList" 
-                          ItemTemplate="{StaticResource AppListTemplate}"
+                          ItemTemplate="{StaticResource AppListTemplate}" Height="330"
             >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -74,5 +74,6 @@
             Click="ScrollRightButton_Click"
             Content="&gt;"
         />
+        <Label x:Name="Title" Grid.Column="1" Content="Welcome to App Store!" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="36" FontFamily="Cooper Black"/>
     </Grid>
 </UserControl>
